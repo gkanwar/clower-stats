@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+	<HorizontalScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		>
+		<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/playerLayout"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:background="#ffffff">
+			<TableRow
+				android:background="#000000"
+				android:layout_margin="1px">
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/playerName" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/team" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/pos" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/g" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/ab" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/r" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/h" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/twob" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/threeb" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/hr" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/rbi" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/bb" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/so" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/sb" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/cs" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/avg" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/obp" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/slg" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/ops" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/sal" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/pred_sal" />
+			</TableRow>
+		</TableLayout>
+	</HorizontalScrollView>
+	</ScrollView>
+</LinearLayout>
