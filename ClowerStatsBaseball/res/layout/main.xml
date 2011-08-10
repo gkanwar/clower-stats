@@ -25,6 +25,10 @@
 			<EditText
 				android:id="@+id/searchBar"
 			/>
+			<Button
+				android:id="@+id/searchButton"
+				android:text="@string/search"
+			/>
 		</TableRow>
 		<TableRow>
 			<TextView
