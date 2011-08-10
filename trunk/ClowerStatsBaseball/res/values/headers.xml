@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="playerName">Player Name</string>
+	
+	<string name="pos">Pos</string>
+	<string name="g">G</string>
+	<string name="ab">AB</string>
+	<string name="r">R</string>
+	<string name="h">H</string>
+	<string name="twob">2B</string>
+	<string name="threeb">3B</string>
+	<string name="hr">HR</string>
+	<string name="rbi">RBI</string>
+	<string name="bb">BB</string>
+	<string name="so">SO</string>
+	<string name="sb">SB</string>
+	<string name="cs">CS</string>
+	<string name="avg">AVG</string>
+	<string name="obp">OBP</string>
+	<string name="slg">SLG</string>
+	<string name="ops">OPS</string>
+	<string name="sal">Sal</string>
+	<string name="pred_sal">Pred Sal</string>
+</resources>

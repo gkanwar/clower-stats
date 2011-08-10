@@ -16,38 +16,39 @@
 	</string-array>
 	<string name="teamPrompt">Choose a team</string>
 	<string-array name="teamArray">
-		<item>Arizona</item>
-		<item>Atlanta</item>
-		<item>Baltimore</item>
-		<item>Boston</item>
-		<item>Chi Cubs</item>
-		<item>Chi White Sox</item>
-		<item>Cincinnati</item>
-		<item>Cleveland</item>
-		<item>Colorado</item>
-		<item>Detroit</item>
-		<item>Florida</item>
-		<item>Houston</item>
-		<item>Kansas City</item>
-		<item>LA Angels</item>
-		<item>LA Dodgers</item>
-		<item>Milwaukee</item>
-		<item>Minnesota</item>
-		<item>NY Mets</item>
-		<item>NY Yankees</item>
-		<item>Oakland</item>
-		<item>Philadelphia</item>
-		<item>Pittsburgh</item>
-		<item>San Diego</item>
-		<item>San Francisco</item>
-		<item>Seattle</item>
-		<item>St. Louis</item>
-		<item>Tampa Bay</item>
-		<item>Texas</item>
-		<item>Toronto</item>
-		<item>Washington</item>
+		<item>ARI</item>
+		<item>ATL</item>
+		<item>BAL</item>
+		<item>BOS</item>
+		<item>CHC</item>
+		<item>CWS</item>
+		<item>CIN</item>
+		<item>CLE</item>
+		<item>COL</item>
+		<item>DET</item>
+		<item>FLA</item>
+		<item>HOU</item>
+		<item>KC</item>
+		<item>LAA</item>
+		<item>LAD</item>
+		<item>MIL</item>
+		<item>MIN</item>
+		<item>NYM</item>
+		<item>NYY</item>
+		<item>OAK</item>
+		<item>PHI</item>
+		<item>PIT</item>
+		<item>SD</item>
+		<item>SF</item>
+		<item>SEA</item>
+		<item>STL</item>
+		<item>TB</item>
+		<item>TEX</item>
+		<item>TOR</item>
+		<item>WAS</item>
 	</string-array>
 <string name="search">Search</string>
 <string name="position">Position</string>
 <string name="team">Team</string>
+
 </resources>
