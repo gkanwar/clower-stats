@@ -5,8 +5,11 @@ import java.util.Scanner;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -33,6 +36,7 @@ public class MatrixActivity extends Activity
 				Log.v("ClowerStats", "Type: position");
 				String pos = intent.getStringExtra("position");
 				Scanner scanner = new Scanner(is);
+				int id = 0;
 				while(scanner.hasNext())
 				{
 					String lName = scanner.next();
@@ -44,19 +48,42 @@ public class MatrixActivity extends Activity
 						TableRow tr = new TableRow(this);
 						TextView tv = new TextView(this);
 						tv.setText(lName + ", " + fInitial);
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
 						tr.addView(tv);
+						
 						tv = new TextView(this);
 						tv.setText(team);
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
 						tr.addView(tv);
+						
 						tv = new TextView(this);
 						tv.setText(playerPos);
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
 						tr.addView(tv);
+						
 						for(int i = 0; i < NUM_COLUMNS - 3; i++)
 						{
-							tv = new TextView(this);
-							tv.setText(scanner.next());
-							tr.addView(tv);
+							scanner.next();
 						}
+						
+						tr.setClickable(true);
+						final int tempId = id;
+						tr.setOnClickListener(new View.OnClickListener()
+						{
+							@Override
+							public void onClick(View v)
+							{
+								Intent intent = new Intent(MatrixActivity.this, PlayerActivity.class);
+								intent.putExtra("id", tempId); //????
+								startActivity(intent);
+							}
+						});
 						tl.addView(tr);
 					}
 					else
@@ -66,6 +93,8 @@ public class MatrixActivity extends Activity
 							scanner.next();
 						}
 					}
+					
+					id++;
 				}
 			}
 			else if(type.equals("team"))
@@ -73,6 +102,7 @@ public class MatrixActivity extends Activity
 				Log.v("ClowerStats", "Type: team");
 				String team = intent.getStringExtra("team");
 				Scanner scanner = new Scanner(is);
+				int id = 0;
 				while(scanner.hasNext())
 				{
 					String lName = scanner.next();
@@ -83,16 +113,43 @@ public class MatrixActivity extends Activity
 						TableRow tr = new TableRow(this);
 						TextView tv = new TextView(this);
 						tv.setText(lName + ", " + fInitial);
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
 						tr.addView(tv);
+						
 						tv = new TextView(this);
 						tv.setText(team);
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
 						tr.addView(tv);
-						for(int i = 0; i < NUM_COLUMNS - 2; i++)
+						
+						tv = new TextView(this);
+						tv.setText(scanner.next());
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
+						tr.addView(tv);
+
+						for(int i = 0; i < NUM_COLUMNS - 3; i++)
 						{
-							tv = new TextView(this);
-							tv.setText(scanner.next());
-							tr.addView(tv);
+							scanner.next();
 						}
+						
+						tr.setClickable(true);
+						final int tempId = id;
+						tr.setOnClickListener(new View.OnClickListener()
+						{
+							@Override
+							public void onClick(View v)
+							{
+								Intent intent = new Intent(MatrixActivity.this, PlayerActivity.class);
+								intent.putExtra("id", tempId); //????
+								startActivity(intent);
+							}
+						});
+						
 						tl.addView(tr);
 					}
 					else
@@ -102,6 +159,8 @@ public class MatrixActivity extends Activity
 							scanner.next();
 						}
 					}
+					
+					id++;
 				}
 			}
 			else
@@ -110,6 +169,7 @@ public class MatrixActivity extends Activity
 				String player = intent.getStringExtra("player");
 				Log.v("ClowerStats", "Search: " + player);
 				Scanner scanner = new Scanner(is);
+				int id = 0;
 				while(scanner.hasNext())
 				{
 					String lName = scanner.next();
@@ -121,13 +181,43 @@ public class MatrixActivity extends Activity
 						TableRow tr = new TableRow(this);
 						TextView tv = new TextView(this);
 						tv.setText(lName + ", " + fInitial);
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
 						tr.addView(tv);
-						for(int i = 0; i < NUM_COLUMNS - 1; i++)
+						
+						tv = new TextView(this);
+						tv.setText(scanner.next());
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
+						tr.addView(tv);
+						
+						tv = new TextView(this);
+						tv.setText(scanner.next());
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
+						tr.addView(tv);
+
+						for(int i = 0; i < NUM_COLUMNS - 3; i++)
 						{
-							tv = new TextView(this);
-							tv.setText(scanner.next());
-							tr.addView(tv);
+							scanner.next();
 						}
+						
+						tr.setClickable(true);
+						final int tempId = id;
+						tr.setOnClickListener(new View.OnClickListener()
+						{
+							@Override
+							public void onClick(View v)
+							{
+								Intent intent = new Intent(MatrixActivity.this, PlayerActivity.class);
+								intent.putExtra("id", tempId); //????
+								startActivity(intent);
+							}
+						});
+
 						tl.addView(tr);
 					}
 					else
@@ -137,6 +227,8 @@ public class MatrixActivity extends Activity
 							scanner.next();
 						}
 					}
+					
+					id++;
 				}
 			}
 		}

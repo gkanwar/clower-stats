@@ -11,8 +11,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MatrixActivity"
-        		  android:label="@string/appName" />
+        <activity android:name=".MatrixActivity"/>
+        <activity android:name=".PlayerActivity" />
 
     </application>
 
