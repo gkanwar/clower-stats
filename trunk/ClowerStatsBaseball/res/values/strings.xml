@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="appName">Baseball Salaries</string>
+    <string name="positionPrompt">Choose a position</string>
+	<string-array name="positionArray">
+		<item>SP</item>
+		<item>C</item>
+		<item>1B</item>
+		<item>2B</item>
+		<item>3B</item>
+		<item>SS</item>
+		<item>LF</item>
+		<item>CF</item>
+		<item>RF</item>
+	</string-array>
+	<string name="teamPrompt">Choose a team</string>
+	<string-array name="teamArray">
+		<item>Arizona</item>
+		<item>Atlanta</item>
+		<item>Baltimore</item>
+		<item>Boston</item>
+		<item>Chi Cubs</item>
+		<item>Chi White Sox</item>
+		<item>Cincinnati</item>
+		<item>Cleveland</item>
+		<item>Colorado</item>
+		<item>Detroit</item>
+		<item>Florida</item>
+		<item>Houston</item>
+		<item>Kansas City</item>
+		<item>LA Angels</item>
+		<item>LA Dodgers</item>
+		<item>Milwaukee</item>
+		<item>Minnesota</item>
+		<item>NY Mets</item>
+		<item>NY Yankees</item>
+		<item>Oakland</item>
+		<item>Philadelphia</item>
+		<item>Pittsburgh</item>
+		<item>San Diego</item>
+		<item>San Francisco</item>
+		<item>Seattle</item>
+		<item>St. Louis</item>
+		<item>Tampa Bay</item>
+		<item>Texas</item>
+		<item>Toronto</item>
+		<item>Washington</item>
+	</string-array>
+<string name="search">Search</string>
+<string name="position">Position</string>
+<string name="team">Team</string>
+</resources>
