@@ -4,6 +4,7 @@
     <string name="appName">Baseball Salaries</string>
     <string name="positionPrompt">Choose a position</string>
 	<string-array name="positionArray">
+		<item>Unselected</item>
 		<item>SP</item>
 		<item>C</item>
 		<item>1B</item>
@@ -16,6 +17,7 @@
 	</string-array>
 	<string name="teamPrompt">Choose a team</string>
 	<string-array name="teamArray">
+		<item>Unselected</item>
 		<item>ARI</item>
 		<item>ATL</item>
 		<item>BAL</item>

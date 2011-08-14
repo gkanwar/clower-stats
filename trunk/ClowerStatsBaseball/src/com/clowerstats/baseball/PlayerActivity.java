@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class PlayerActivity extends Activity
 			AssetManager assetManager = getAssets();
 			try
 			{
+				double predSal = 0.0, sal = 0.0;
 				InputStream is = assetManager.open("firstsaltest.txt");
 				int curr = 0;
 				while(curr < id)
@@ -39,7 +41,7 @@ public class PlayerActivity extends Activity
 					}
 				}
 				Scanner scanner = new Scanner(is);
-				TableLayout tl = (TableLayout) findViewById(R.id.playerLayout);
+				TableLayout tl = (TableLayout) findViewById(R.id.playerTableLayout);
 				TableRow tr = new TableRow(this);
 				
 				String lName = scanner.next();
@@ -53,40 +55,63 @@ public class PlayerActivity extends Activity
 				
 				for(int i = 0; i < NUM_COLUMNS - 1; i++)
 				{
-					tv = new TextView(this);
-					tv.setText(scanner.next());
-					tv.setTextSize(18);
-					tv.setTextColor(Color.BLACK);
-					tv.setPadding(5, 2, 5, 2);
-					tr.addView(tv);
+					if(i == 19) //Player value column
+					{
+						predSal = scanner.nextDouble();
+						tv = new TextView(this);
+						tv.setText(Double.toString(predSal));
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
+						tr.addView(tv);
+					}
+					else if(i == 18) //Salary column
+					{
+						sal = scanner.nextDouble();
+						tv = new TextView(this);
+						tv.setText(Double.toString(sal));
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
+						tr.addView(tv);
+					}
+					else
+					{
+						tv = new TextView(this);
+						tv.setText(scanner.next());
+						tv.setTextSize(18);
+						tv.setTextColor(Color.BLACK);
+						tv.setPadding(5, 2, 5, 2);
+						tr.addView(tv);
+					}
 				}
 				
 				tl.addView(tr);
+
+				tv = (TextView) findViewById(R.id.playerSalState);
+				if(sal < predSal)
+				{
+					tv.setText("Underpaid");
+					tv.setTextColor(Color.RED);
+					//Log.v("ClowerStats", "Underpaid");
+				}
+				else if(sal == predSal)
+				{
+					tv.setText("Perfect");
+					tv.setTextColor(Color.BLUE);
+					//Log.v("ClowerStats", "Perfect");
+				}
+				else
+				{
+					tv.setText("Overpaid");
+					tv.setTextColor(Color.GREEN);
+					//Log.v("ClowerSxtats", "Overpaid");
+				}
 			}
 			catch(Exception e)
 			{
 				//Do nothing
 			}
-				for(int i = 0; i <NUM_COLUMNS - 2; i++)
-				{
-					Scanner scanner
-					scanner.next();
-				}
-				int predSal = scanner.nextInt();
-				int sal = scanner.nextInt();
-				if(sal < predSal)
-				{
-					Log.v("ClowerStats","Underpaid");
-				}
-				else if(sal == predSal)
-				{
-					Log.v("ClowerStats","Correctly Paid");
-				}
-				else
-				{
-					Log.v("ClowerStats","Overpaid");
-				}
-					
 		}
 	}
 }
