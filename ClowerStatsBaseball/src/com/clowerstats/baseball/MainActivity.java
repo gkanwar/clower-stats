@@ -53,10 +53,13 @@ public class MainActivity extends Activity
     {
         public void onItemSelected(AdapterView<?> parent, View view, int pos, long id)
         {
-        	Intent intent = new Intent(MainActivity.this, MatrixActivity.class);
-        	intent.putExtra("type", "position");
-        	intent.putExtra("position", parent.getItemAtPosition(pos).toString());
-        	startActivity(intent);
+        	if(pos != 0)
+        	{
+	        	Intent intent = new Intent(MainActivity.this, MatrixActivity.class);
+	        	intent.putExtra("type", "position");
+	        	intent.putExtra("position", parent.getItemAtPosition(pos).toString());
+	        	startActivity(intent);
+        	}
         }
 
         public void onNothingSelected(AdapterView<?> parent)
@@ -68,10 +71,13 @@ public class MainActivity extends Activity
     {
         public void onItemSelected(AdapterView<?> parent, View view, int pos, long id)
         {
-        	Intent intent = new Intent(MainActivity.this, MatrixActivity.class);
-        	intent.putExtra("type", "team");
-        	intent.putExtra("team", parent.getItemAtPosition(pos).toString());
-        	startActivity(intent);
+        	if(pos != 0)
+        	{
+	        	Intent intent = new Intent(MainActivity.this, MatrixActivity.class);
+	        	intent.putExtra("type", "team");
+	        	intent.putExtra("team", parent.getItemAtPosition(pos).toString());
+	        	startActivity(intent);
+        	}
         }
 
         public void onNothingSelected(AdapterView<?> parent)
