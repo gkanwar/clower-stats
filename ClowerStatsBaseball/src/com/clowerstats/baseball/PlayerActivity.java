@@ -67,6 +67,26 @@ public class PlayerActivity extends Activity
 			{
 				//Do nothing
 			}
+				for(int i = 0; i <NUM_COLUMNS - 2; i++)
+				{
+					Scanner scanner
+					scanner.next();
+				}
+				int predSal = scanner.nextInt();
+				int sal = scanner.nextInt();
+				if(sal < predSal)
+				{
+					Log.v("ClowerStats","Underpaid");
+				}
+				else if(sal == predSal)
+				{
+					Log.v("ClowerStats","Correctly Paid");
+				}
+				else
+				{
+					Log.v("ClowerStats","Overpaid");
+				}
+					
 		}
 	}
 }
