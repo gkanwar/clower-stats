@@ -19,6 +19,6 @@
 	<string name="obp">OBP</string>
 	<string name="slg">SLG</string>
 	<string name="ops">OPS</string>
-	<string name="sal">Sal</string>
-	<string name="pred_sal">Pred Sal</string>
+	<string name="sal">Salary</string>
+	<string name="pred_sal">Player Value</string>
 </resources>
