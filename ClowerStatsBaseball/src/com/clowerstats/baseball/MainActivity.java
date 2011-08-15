@@ -33,8 +33,9 @@ public class MainActivity extends Activity
         
         positionSpinner.setOnItemSelectedListener(new OnPositionSelectedListener());
         teamSpinner.setOnItemSelectedListener(new OnTeamSelectedListener());
-        
+              
         Button button = (Button) findViewById(R.id.searchButton);
+        
         button.setOnClickListener(new View.OnClickListener()
 		{
 			@Override
@@ -47,8 +48,14 @@ public class MainActivity extends Activity
 	        	startActivity(intent);
 			}
 		});
+        
+        
+        
     }
     
+    	
+    	
+    	
     public class OnPositionSelectedListener implements OnItemSelectedListener
     {
         public void onItemSelected(AdapterView<?> parent, View view, int pos, long id)

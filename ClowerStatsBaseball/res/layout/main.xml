@@ -48,5 +48,15 @@
 				android:prompt="@string/teamPrompt"
 			/>
 		</TableRow>
+		<TableRow>
+			<TextView
+				android:text=""
+			/>
+			
+			<Button
+				android:id="@+id/aboutButton"
+				android:text="@string/about"
+				/>
+		</TableRow>
 	</TableLayout>
 </LinearLayout>

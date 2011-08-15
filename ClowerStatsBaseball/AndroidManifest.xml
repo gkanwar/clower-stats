@@ -12,14 +12,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".MatrixActivity">
-        	<intent-filter>
-        		<action android:name="android.intent.action.DEFAULT" />
-        	</intent-filter>
+                <intent-filter>
+                        <action android:name="android.intent.action.DEFAULT" />
+                </intent-filter>
         </activity>
         <activity android:name=".PlayerActivity">
-        	<intent-filter>
-        		<action android:name="android.intent.action.DEFAULT" />
-        	</intent-filter>
+                <intent-filter>
+                        <action android:name="android.intent.action.DEFAULT" />
+                </intent-filter>
         </activity>
 
     </application>
