@@ -1,6 +1,9 @@
 package com.clowerstats.baseball;
 
 import java.io.InputStream;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 import android.app.Activity;
@@ -100,14 +103,24 @@ public class PlayerActivity extends Activity
                                 tl.addView(tr);
 
                                 tv = (TextView) findViewById(R.id.playerSalState);
-                                Double.toString(predSal-sal);
-                                Double.toString(sal-predSal);
+                                
+                                
+                                Double d = predSal-sal;
+                                Double dtoo = sal-predSal;
+                                
+                                double myNum = d;
+                                int precision = 10000; //keep 4 digits
+                                myNum= Math.floor(myNum * precision +.5)/precision;
+                                double myNumtoo = dtoo;
+                                myNumtoo= Math.floor(myNumtoo * precision + .5)/precision;
+                                
+                                
                                 if(posit == 1)
                                {
                             	  
                                 if(sal < predSal - pitch)
                                 {
-                                        tv.setText("Undervalued by\n $ "+ Double.toString(predSal-sal) + " Million");
+                                        tv.setText("Undervalued by\n $ "+ (myNum) + " Million");
                                       
                                         tv.setTextColor(Color.RED);
                                         tv.setTextSize(40);
@@ -115,7 +128,7 @@ public class PlayerActivity extends Activity
                                 }
                                 else if(sal > predSal - pitch && sal < predSal + pitch)
                                 {
-                                        tv.setText("Well Valued:\n Difference of\n$" + Double.toString(sal-predSal) + " Million");
+                                        tv.setText("Well Valued:\n Difference of\n$" + (myNumtoo) + " Million");
                                         tv.setTextSize(40);
                                         tv.setTextColor(Color.BLUE);
                                         
@@ -123,7 +136,7 @@ public class PlayerActivity extends Activity
                                 }
                                 else
                                 {
-                                        tv.setText("Overvalued by\n $ " + Double.toString(sal-predSal) + " Million");
+                                        tv.setText("Overvalued by\n $ " + (myNumtoo) + " Million");
                                         tv.setTextColor(Color.GREEN);
                                         tv.setTextSize(40);
                                         //Log.v("ClowerSxtats", "Overvalued");
@@ -133,21 +146,21 @@ public class PlayerActivity extends Activity
                                {
                             	   if(sal < predSal - catcher)
                                    {
-                                           tv.setText("Undervalued by\n $ " + Double.toString(predSal-sal) + " Million");
+                                           tv.setText("Undervalued by\n $ " + (myNum) + " Million");
                                            tv.setTextColor(Color.RED);
                                            tv.setTextSize(40);
                                            //Log.v("ClowerStats", "Undervalued");
                                    }
                                    else if(sal > predSal - catcher && sal < predSal + catcher)
                                    {
-                                           tv.setText("Well Valued:\n Difference of\n$" + Double.toString(sal-predSal) + " Million");
+                                           tv.setText("Well Valued:\n Difference of\n$" + (myNumtoo) + " Million");
                                            tv.setTextColor(Color.BLUE);
                                            tv.setTextSize(40);
                                            //Log.v("ClowerStats", "Well Valued");
                                    }
                                    else
                                    {
-                                           tv.setText("Overvalued by\n $ " + Double.toString(sal-predSal) + " Million");
+                                           tv.setText("Overvalued by\n $ " + (myNumtoo) + " Million");
                                            tv.setTextColor(Color.GREEN);
                                            tv.setTextSize(40);
                                            //Log.v("ClowerSxtats", "Overvalued");
@@ -157,21 +170,21 @@ public class PlayerActivity extends Activity
                                { 
                             	   if(sal < predSal - firstb )
                                {
-                                   tv.setText("Undervalued by\n $ "+ Double.toString(predSal-sal) + " Million");
+                                   tv.setText("Undervalued by\n $ "+ (myNum) + " Million");
                                    tv.setTextColor(Color.RED);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Undervalued");
                            }
                            else if(sal > predSal - firstb && sal < predSal + firstb)
                            {
-                                   tv.setText("Well Valued:\n Difference of\n$" + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Well Valued:\n Difference of\n$" + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.BLUE);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Well Valued");
                            }
                            else
                            {
-                                   tv.setText("Overvalued by\n $ " + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Overvalued by\n $ " + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.GREEN);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerSxtats", "Overvalued");
@@ -181,21 +194,21 @@ public class PlayerActivity extends Activity
                                { 
                             	   if(sal < predSal - secondb)
                                {
-                                   tv.setText("Undervalued by\n $ "+ Double.toString(predSal-sal) + " Million");
+                                   tv.setText("Undervalued by\n $ "+ (myNum) + " Million");
                                    tv.setTextColor(Color.RED);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Undervalued");
                            }
                            else if(sal > predSal - secondb && sal < predSal + secondb)
                            {
-                                   tv.setText("Well Valued:\n Difference of\n$" + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Well Valued:\n Difference of\n$" + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.BLUE);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Well Valued");
                            }
                            else
                            {
-                                   tv.setText("Overvalued by\n $ " + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Overvalued by\n $ " + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.GREEN);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerSxtats", "Overvalued");
@@ -205,21 +218,21 @@ public class PlayerActivity extends Activity
                                { 
                             	   if(sal < predSal - thirdb )
                                {
-                                   tv.setText("Undervalued by\n $ "+ Double.toString(predSal-sal) + " Million");
+                                   tv.setText("Undervalued by\n $ "+ (myNum) + " Million");
                                    tv.setTextColor(Color.RED);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Undervalued");
                            }
                            else if(sal > predSal - thirdb && sal < predSal + thirdb)
                            {
-                                   tv.setText("Well Valued:\n Difference of\n$" + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Well Valued:\n Difference of\n$" + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.BLUE);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Well Valued");
                            }
                            else
                            {
-                                   tv.setText("Overvalued by\n $ " + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Overvalued by\n $ " + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.GREEN);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerSxtats", "Overvalued");
@@ -229,21 +242,21 @@ public class PlayerActivity extends Activity
                                { 
                             	   if(sal < predSal - shortstop)
                                {
-                                   tv.setText("Undervalued by\n $ "+ Double.toString(predSal-sal) + " Million");
+                                   tv.setText("Undervalued by\n $ "+ (myNum) + " Million");
                                    tv.setTextColor(Color.RED);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Undervalued");
                            }
                            else if(sal > predSal - shortstop && sal < predSal + shortstop)
                            {
-                                   tv.setText("Well Valued:\n Difference of\n$" + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Well Valued:\n Difference of\n$" + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.BLUE);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Well Valued");
                            }
                            else
                            {
-                                   tv.setText("Overvalued by\n $ " + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Overvalued by\n $ " + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.GREEN);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerSxtats", "Overvalued");
@@ -253,21 +266,21 @@ public class PlayerActivity extends Activity
                                { 
                             	   if(sal < predSal - leftf )
                                {
-                                   tv.setText("Undervalued by\n $ "+ Double.toString(predSal-sal) + " Million");
+                                   tv.setText("Undervalued by\n $ "+ (myNum) + " Million");
                                    tv.setTextColor(Color.RED);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Undervalued");
                            }
                            else if(sal > predSal - leftf && sal < predSal + leftf)
                            {
-                                   tv.setText("Well Valued:\n Difference of\n$" + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Well Valued:\n Difference of\n$" + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.BLUE);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Well Valued");
                            }
                            else
                            {
-                                   tv.setText("Overvalued by\n $ " + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Overvalued by\n $ " + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.GREEN);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerSxtats", "Overvalued");
@@ -277,21 +290,21 @@ public class PlayerActivity extends Activity
                                { 
                             	   if(sal < predSal - centerf )
                                {
-                                   tv.setText("Undervalued by\n $ "+ Double.toString(predSal-sal) + " Million");
+                                   tv.setText("Undervalued by\n $ "+ (myNum) + " Million");
                                    tv.setTextColor(Color.RED);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Undervalued");
                            }
                            else if(sal > predSal - centerf && sal < predSal + centerf)
                            {
-                                   tv.setText("Well Valued:\n Difference of\n$" + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Well Valued:\n Difference of\n$" + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.BLUE);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Well Valued");
                            }
                            else
                            {
-                                   tv.setText("Overvalued by\n $ " + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Overvalued by\n $ " + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.GREEN);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerSxtats", "Overvalued");
@@ -301,21 +314,21 @@ public class PlayerActivity extends Activity
                                { 
                             	   if(sal < predSal - rightf )
                                {
-                                   tv.setText("Undervalued by\n $ "+ Double.toString(predSal-sal) + " Million");
+                                   tv.setText("Undervalued by\n $ "+ (myNum) + " Million");
                                    tv.setTextColor(Color.RED);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Undervalued");
                            }
                            else if(sal > predSal - rightf && sal < predSal + rightf)
                            {
-                                   tv.setText("Well Valued:\n Difference of\n$" + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Well Valued:\n Difference of\n$" + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.BLUE);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerStats", "Well Valued");
                            }
                            else
                            {
-                                   tv.setText("Overvalued by\n $ " + Double.toString(sal-predSal) + " Million");
+                                   tv.setText("Overvalued by\n $ " + (myNumtoo) + " Million");
                                    tv.setTextColor(Color.GREEN);
                                    tv.setTextSize(40);
                                    //Log.v("ClowerSxtats", "Overvalued");

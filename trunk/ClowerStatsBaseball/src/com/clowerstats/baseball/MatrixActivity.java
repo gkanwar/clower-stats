@@ -2,6 +2,7 @@ package com.clowerstats.baseball;
 
 import java.io.InputStream;
 import java.util.Scanner;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetManager;
@@ -13,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+
 
 public class MatrixActivity extends Activity
 {

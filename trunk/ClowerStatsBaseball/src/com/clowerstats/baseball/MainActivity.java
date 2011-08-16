@@ -27,7 +27,7 @@ public class MainActivity extends Activity
         
         Spinner teamSpinner = (Spinner) findViewById(R.id.teamSpinner);
         adapter = ArrayAdapter.createFromResource(
-        		this, R.array.teamArray, android.R.layout.simple_spinner_item);
+                        this, R.array.teamArray, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         teamSpinner.setAdapter(adapter);
         
@@ -37,36 +37,36 @@ public class MainActivity extends Activity
         Button button = (Button) findViewById(R.id.searchButton);
         
         button.setOnClickListener(new View.OnClickListener()
-		{
-			@Override
-			public void onClick(View v)
-			{
-		        EditText et = (EditText) findViewById(R.id.searchBar);
-	        	Intent intent = new Intent(MainActivity.this, MatrixActivity.class);
-	        	intent.putExtra("type", "player");
-	        	intent.putExtra("player", et.getText().toString());
-	        	startActivity(intent);
-			}
-		});
+                {
+                        @Override
+                        public void onClick(View v)
+                        {
+                        EditText et = (EditText) findViewById(R.id.searchBar);
+                        Intent intent = new Intent(MainActivity.this, MatrixActivity.class);
+                        intent.putExtra("type", "player");
+                        intent.putExtra("player", et.getText().toString());
+                        startActivity(intent);
+                        }
+                });
         
         
         
     }
     
-    	
-    	
-    	
+        
+        
+        
     public class OnPositionSelectedListener implements OnItemSelectedListener
     {
         public void onItemSelected(AdapterView<?> parent, View view, int pos, long id)
         {
-        	if(pos != 0)
-        	{
-	        	Intent intent = new Intent(MainActivity.this, MatrixActivity.class);
-	        	intent.putExtra("type", "position");
-	        	intent.putExtra("position", parent.getItemAtPosition(pos).toString());
-	        	startActivity(intent);
-        	}
+                if(pos != 0)
+                {
+                        Intent intent = new Intent(MainActivity.this, MatrixActivity.class);
+                        intent.putExtra("type", "position");
+                        intent.putExtra("position", parent.getItemAtPosition(pos).toString());
+                        startActivity(intent);
+                }
         }
 
         public void onNothingSelected(AdapterView<?> parent)
@@ -78,13 +78,13 @@ public class MainActivity extends Activity
     {
         public void onItemSelected(AdapterView<?> parent, View view, int pos, long id)
         {
-        	if(pos != 0)
-        	{
-	        	Intent intent = new Intent(MainActivity.this, MatrixActivity.class);
-	        	intent.putExtra("type", "team");
-	        	intent.putExtra("team", parent.getItemAtPosition(pos).toString());
-	        	startActivity(intent);
-        	}
+                if(pos != 0)
+                {
+                        Intent intent = new Intent(MainActivity.this, MatrixActivity.class);
+                        intent.putExtra("type", "team");
+                        intent.putExtra("team", parent.getItemAtPosition(pos).toString());
+                        startActivity(intent);
+                }
         }
 
         public void onNothingSelected(AdapterView<?> parent)
