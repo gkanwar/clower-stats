@@ -3,52 +3,52 @@
     <string name="hello">Hello World, MainActivity!</string>
     <string name="appName">Baseball Salaries</string>
     <string name="positionPrompt">Choose a position</string>
-	<string-array name="positionArray">
-		<item>Unselected</item>
-		<item>SP</item>
-		<item>C</item>
-		<item>1B</item>
-		<item>2B</item>
-		<item>3B</item>
-		<item>SS</item>
-		<item>LF</item>
-		<item>CF</item>
-		<item>RF</item>
-	</string-array>
-	<string name="teamPrompt">Choose a team</string>
-	<string-array name="teamArray">
-		<item>Unselected</item>
-		<item>ARI</item>
-		<item>ATL</item>
-		<item>BAL</item>
-		<item>BOS</item>
-		<item>CHC</item>
-		<item>CWS</item>
-		<item>CIN</item>
-		<item>CLE</item>
-		<item>COL</item>
-		<item>DET</item>
-		<item>FLA</item>
-		<item>HOU</item>
-		<item>KC</item>
-		<item>LAA</item>
-		<item>LAD</item>
-		<item>MIL</item>
-		<item>MIN</item>
-		<item>NYM</item>
-		<item>NYY</item>
-		<item>OAK</item>
-		<item>PHI</item>
-		<item>PIT</item>
-		<item>SD</item>
-		<item>SF</item>
-		<item>SEA</item>
-		<item>STL</item>
-		<item>TB</item>
-		<item>TEX</item>
-		<item>TOR</item>
-		<item>WAS</item>
-	</string-array>
+        <string-array name="positionArray">
+                <item>Unselected</item>
+                <item>SP</item>
+                <item>C</item>
+                <item>1B</item>
+                <item>2B</item>
+                <item>3B</item>
+                <item>SS</item>
+                <item>LF</item>
+                <item>CF</item>
+                <item>RF</item>
+        </string-array>
+        <string name="teamPrompt">Choose a team</string>
+        <string-array name="teamArray">
+                <item>Unselected</item>
+                <item>ARI</item>
+                <item>ATL</item>
+                <item>BAL</item>
+                <item>BOS</item>
+                <item>CHC</item>
+                <item>CWS</item>
+                <item>CIN</item>
+                <item>CLE</item>
+                <item>COL</item>
+                <item>DET</item>
+                <item>FLA</item>
+                <item>HOU</item>
+                <item>KC</item>
+                <item>LAA</item>
+                <item>LAD</item>
+                <item>MIL</item>
+                <item>MIN</item>
+                <item>NYM</item>
+                <item>NYY</item>
+                <item>OAK</item>
+                <item>PHI</item>
+                <item>PIT</item>
+                <item>SD</item>
+                <item>SF</item>
+                <item>SEA</item>
+                <item>STL</item>
+                <item>TB</item>
+                <item>TEX</item>
+                <item>TOR</item>
+                <item>WAS</item>
+        </string-array>
 <string name="search">Search</string>
 <string name="position">Position</string>
 <string name="team">Team</string>
