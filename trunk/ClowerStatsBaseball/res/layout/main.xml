@@ -52,11 +52,7 @@
                         <TextView
                                 android:text=""
                         />
-                        
-                        <Button
-                                android:id="@+id/aboutButton"
-                                android:text="@string/about"
-                                />
+                        <Button android:text="@string/about" android:id="@+id/aboutButton"></Button>
                 </TableRow>
         </TableLayout>
 </LinearLayout>

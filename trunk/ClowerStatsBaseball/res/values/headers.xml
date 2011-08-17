@@ -21,4 +21,12 @@
 	<string name="ops">OPS</string>
 	<string name="sal">Salary</string>
 	<string name="pred_sal">Player Value</string>
+	<string name="w">W</string>
+	<string name="l">L</string>
+	<string name="era">ERA</string>
+	<string name="gs">GS</string>
+	<string name="ip">IP</string>
+	<string name="er">ER</string>
+	<string name="whip">WHIP</string>
+	
 </resources>

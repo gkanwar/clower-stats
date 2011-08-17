@@ -49,12 +49,23 @@ public class MainActivity extends Activity
                         }
                 });
         
+ Button buttontoo = (Button) findViewById(R.id.aboutButton);
         
+        buttontoo.setOnClickListener(new View.OnClickListener()
+        {
+        	@Override
+        	public void onClick(View v)
+        	{
+        		Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+        		startActivity(intent);
+        		
+        	}
+        });
         
     }
     
         
-        
+       
         
     public class OnPositionSelectedListener implements OnItemSelectedListener
     {

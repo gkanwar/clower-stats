@@ -46,7 +46,56 @@ public class MatrixActivity extends Activity
                                         String fInitial = scanner.next();
                                         String team = scanner.next();
                                         String playerPos = scanner.next();
-                                        if(pos.equals(playerPos))
+                                        
+                                        if(playerPos.equals("SP"))
+                                        {
+                                        	if(pos.equals(playerPos))
+                                        {
+                                        	TableRow tr = new TableRow(this);
+                                        	TextView tv = new TextView(this);
+                                        	tv.setText(lName + ", " + fInitial);
+                                        	tv.setTextSize(18);
+                                        	tv.setTextColor(Color.BLACK);
+                                            tv.setPadding(5, 2, 5, 2);
+                                            tr.addView(tv);
+                                            
+                                            tv = new TextView(this);
+                                            tv.setText(team);
+                                            tv.setTextSize(18);
+                                            tv.setTextColor(Color.BLACK);
+                                            tv.setPadding(5, 2, 5, 2);
+                                            tr.addView(tv);
+                                            
+                                            tv = new TextView(this);
+                                            tv.setText(playerPos);
+                                            tv.setTextSize(18);
+                                            tv.setTextColor(Color.BLACK);
+                                            tv.setPadding(5, 2, 5, 2);
+                                            tr.addView(tv);
+                                            
+                                            for (int i=0; i < NUM_COLUMNS -3; i ++)
+                                            {
+                                                scanner.next();
+                                        }
+                                        
+                                        tr.setClickable(true);
+                                        final int tempId = id;
+                                        tr.setOnClickListener(new View.OnClickListener()
+                                        {
+                                                @Override
+                                                public void onClick(View v)
+                                                {
+                                                        Intent intent = new Intent(MatrixActivity.this, PitcherActivity.class);
+                                                        intent.putExtra("id", tempId); //????
+                                                        startActivity(intent);
+                                                }
+                                        });
+                                        tl.addView(tr);
+                                }
+                                    
+                                        	
+                                        }
+                                        else if(pos.equals(playerPos))
                                         {
                                                 TableRow tr = new TableRow(this);
                                                 TextView tv = new TextView(this);
@@ -113,6 +162,9 @@ public class MatrixActivity extends Activity
                                         String playerTeam = scanner.next();
                                         if(team.equals(playerTeam))
                                         {
+                                        	String playerPos = scanner.next();
+                                        	if(playerPos.equals("SP"))
+                                        	{
                                                 TableRow tr = new TableRow(this);
                                                 TextView tv = new TextView(this);
                                                 tv.setText(lName + ", " + fInitial);
@@ -129,7 +181,50 @@ public class MatrixActivity extends Activity
                                                 tr.addView(tv);
                                                 
                                                 tv = new TextView(this);
-                                                tv.setText(scanner.next());
+                                                tv.setText(playerPos);
+                                                tv.setTextSize(18);
+                                                tv.setTextColor(Color.BLACK);
+                                                tv.setPadding(5, 2, 5, 2);
+                                                tr.addView(tv);
+
+                                                for(int i = 0; i < NUM_COLUMNS - 3; i++)
+                                                {
+                                                        scanner.next();
+                                                }
+                                                
+                                                tr.setClickable(true);
+                                                final int tempId = id;
+                                                tr.setOnClickListener(new View.OnClickListener()
+                                                {
+                                                        @Override
+                                                        public void onClick(View v)
+                                                        {
+                                                                Intent intent = new Intent(MatrixActivity.this, PitcherActivity.class);
+                                                                intent.putExtra("id", tempId); //????
+                                                                startActivity(intent);
+                                                        }
+                                                });
+                                                
+                                                tl.addView(tr);
+                                        }
+                                        	else {
+                                        		TableRow tr = new TableRow(this);
+                                                TextView tv = new TextView(this);
+                                                tv.setText(lName + ", " + fInitial);
+                                                tv.setTextSize(18);
+                                                tv.setTextColor(Color.BLACK);
+                                                tv.setPadding(5, 2, 5, 2);
+                                                tr.addView(tv);
+                                                
+                                                tv = new TextView(this);
+                                                tv.setText(team);
+                                                tv.setTextSize(18);
+                                                tv.setTextColor(Color.BLACK);
+                                                tv.setPadding(5, 2, 5, 2);
+                                                tr.addView(tv);
+                                                
+                                                tv = new TextView(this);
+                                                tv.setText(playerPos);
                                                 tv.setTextSize(18);
                                                 tv.setTextColor(Color.BLACK);
                                                 tv.setPadding(5, 2, 5, 2);
@@ -155,6 +250,7 @@ public class MatrixActivity extends Activity
                                                 
                                                 tl.addView(tr);
                                         }
+                                        	}
                                         else
                                         {
                                                 for(int i = 0; i < NUM_COLUMNS - 2; i++)
@@ -180,6 +276,11 @@ public class MatrixActivity extends Activity
                                         Log.v("ClowerStats", "Testing: lName = " + lName + " and player = " + player);
                                         if(lName.toLowerCase().contains(player.toLowerCase()))
                                         {
+                                        	String team = scanner.next();
+                                        	String playerPos = scanner.next();
+                                        	if(playerPos.equals("SP"))
+                                        	{
+                                        	
                                                 Log.v("ClowerStats", "Matched!");
                                                 TableRow tr = new TableRow(this);
                                                 TextView tv = new TextView(this);
@@ -190,14 +291,14 @@ public class MatrixActivity extends Activity
                                                 tr.addView(tv);
                                                 
                                                 tv = new TextView(this);
-                                                tv.setText(scanner.next());
+                                                tv.setText(team);
                                                 tv.setTextSize(18);
                                                 tv.setTextColor(Color.BLACK);
                                                 tv.setPadding(5, 2, 5, 2);
                                                 tr.addView(tv);
                                                 
                                                 tv = new TextView(this);
-                                                tv.setText(scanner.next());
+                                                tv.setText(playerPos);
                                                 tv.setTextSize(18);
                                                 tv.setTextColor(Color.BLACK);
                                                 tv.setPadding(5, 2, 5, 2);
@@ -215,13 +316,58 @@ public class MatrixActivity extends Activity
                                                         @Override
                                                         public void onClick(View v)
                                                         {
-                                                                Intent intent = new Intent(MatrixActivity.this, PlayerActivity.class);
+                                                                Intent intent = new Intent(MatrixActivity.this, PitcherActivity.class);
                                                                 intent.putExtra("id", tempId); //????
                                                                 startActivity(intent);
                                                         }
                                                 });
 
                                                 tl.addView(tr);
+                                        }
+                                        	else
+                                        	{Log.v("ClowerStats", "Matched!");
+                                            TableRow tr = new TableRow(this);
+                                            TextView tv = new TextView(this);
+                                            tv.setText(lName + ", " + fInitial);
+                                            tv.setTextSize(18);
+                                            tv.setTextColor(Color.BLACK);
+                                            tv.setPadding(5, 2, 5, 2);
+                                            tr.addView(tv);
+                                            
+                                            tv = new TextView(this);
+                                            tv.setText(team);
+                                            tv.setTextSize(18);
+                                            tv.setTextColor(Color.BLACK);
+                                            tv.setPadding(5, 2, 5, 2);
+                                            tr.addView(tv);
+                                            
+                                            tv = new TextView(this);
+                                            tv.setText(playerPos);
+                                            tv.setTextSize(18);
+                                            tv.setTextColor(Color.BLACK);
+                                            tv.setPadding(5, 2, 5, 2);
+                                            tr.addView(tv);
+
+                                            for(int i = 0; i < NUM_COLUMNS - 3; i++)
+                                            {
+                                                    scanner.next();
+                                            }
+                                            
+                                            tr.setClickable(true);
+                                            final int tempId = id;
+                                            tr.setOnClickListener(new View.OnClickListener()
+                                            {
+                                                    @Override
+                                                    public void onClick(View v)
+                                                    {
+                                                            Intent intent = new Intent(MatrixActivity.this, PlayerActivity.class);
+                                                            intent.putExtra("id", tempId); //????
+                                                            startActivity(intent);
+                                                    }
+                                            });
+
+                                            tl.addView(tr);
+                                    }
                                         }
                                         else
                                         {
