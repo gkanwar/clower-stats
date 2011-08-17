@@ -21,6 +21,12 @@
                         <action android:name="android.intent.action.DEFAULT" />
                 </intent-filter>
         </activity>
+        <activity android:name="AboutActivity">
+        		<intent-filter>
+        			<action android:name="android.intent.action.DEFAULT" />
+        			</intent-filter>
+        			</activity>
+        <activity android:name="PitcherActivity"></activity>
 
     </application>
 
