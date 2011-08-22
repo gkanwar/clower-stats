@@ -27,7 +27,7 @@ public class MatrixActivity extends Activity
                 setContentView(R.layout.matrix);
                 Intent intent = getIntent();
                 String type = intent.getStringExtra("type");
-                Log.v("ClowerStats", "Type: " + type);
+                
                 AssetManager assetManager = getAssets();
                 try
                 {
@@ -36,7 +36,7 @@ public class MatrixActivity extends Activity
                         
                         if(type.equals("position"))
                         {
-                                Log.v("ClowerStats", "Type: position");
+                                
                                 String pos = intent.getStringExtra("position");
                                 Scanner scanner = new Scanner(is);
                                 int id = 0;
@@ -151,7 +151,7 @@ public class MatrixActivity extends Activity
                         }
                         else if(type.equals("team"))
                         {
-                                Log.v("ClowerStats", "Type: team");
+                               
                                 String team = intent.getStringExtra("team");
                                 Scanner scanner = new Scanner(is);
                                 int id = 0;
@@ -264,16 +264,16 @@ public class MatrixActivity extends Activity
                         }
                         else
                         {
-                                Log.v("ClowerStats", "Type: player");
+                               
                                 String player = intent.getStringExtra("player");
-                                Log.v("ClowerStats", "Search: " + player);
+                                
                                 Scanner scanner = new Scanner(is);
                                 int id = 0;
                                 while(scanner.hasNext())
                                 {
                                         String lName = scanner.next();
                                         String fInitial = scanner.next();
-                                        Log.v("ClowerStats", "Testing: lName = " + lName + " and player = " + player);
+                                        
                                         if(lName.toLowerCase().contains(player.toLowerCase()))
                                         {
                                         	String team = scanner.next();
@@ -281,7 +281,7 @@ public class MatrixActivity extends Activity
                                         	if(playerPos.equals("SP"))
                                         	{
                                         	
-                                                Log.v("ClowerStats", "Matched!");
+                                                
                                                 TableRow tr = new TableRow(this);
                                                 TextView tv = new TextView(this);
                                                 tv.setText(lName + ", " + fInitial);
@@ -325,7 +325,7 @@ public class MatrixActivity extends Activity
                                                 tl.addView(tr);
                                         }
                                         	else
-                                        	{Log.v("ClowerStats", "Matched!");
+                                        	{
                                             TableRow tr = new TableRow(this);
                                             TextView tv = new TextView(this);
                                             tv.setText(lName + ", " + fInitial);

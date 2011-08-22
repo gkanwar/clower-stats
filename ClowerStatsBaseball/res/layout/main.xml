@@ -34,7 +34,7 @@
                                 android:paddingTop="5px"
                                 android:paddingBottom="5px"
                                	
-                                android:background="@drawable/btn_red"
+                                android:background="@drawable/btn_custom"
                         />
                 </TableRow>
                 
