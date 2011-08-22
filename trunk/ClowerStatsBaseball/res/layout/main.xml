@@ -21,6 +21,7 @@
                 <TableRow>
                         <TextView
                                 android:text="@string/search"
+                                android:layout_marginLeft="3px"
                         />
                         <EditText
                                 android:id="@+id/searchBar"
@@ -28,15 +29,33 @@
                         <Button
                                 android:id="@+id/searchButton"
                                 android:text="@string/search"
+                                android:paddingLeft="5px"
+                                android:paddingRight="5px"
+                                android:paddingTop="5px"
+                                android:paddingBottom="5px"
+                               	
+                                android:background="@drawable/btn_red"
                         />
                 </TableRow>
+                
                 <TableRow>
                         <TextView
                                 android:text="@string/position"
                         />
                         <Spinner
-                                android:id="@+id/positionSpinner"
+                                 android:id="@+id/positionSpinner"
+                                android:paddingLeft="8px"
+                                android:paddingTop="5px"
+                                android:paddingRight="5px"
+                                android:paddingBottom="5px"
+                                android:layout_marginBottom="5px"
+                                android:layout_marginLeft="3px"
+                                android:bottomRightRadius="7dp" 
+                              	android:bottomLeftRadius="7dp" 
+     							android:topLeftRadius="7dp" 
+     							android:topRightRadius="7dp"
                                 android:prompt="@string/positionPrompt"
+                                android:background="@drawable/spinner_custom"
                         />
                 </TableRow>
                 <TableRow>
@@ -45,14 +64,25 @@
                         />
                         <Spinner
                                 android:id="@+id/teamSpinner"
+                                android:paddingLeft="8px"
+                                android:paddingTop="5px"
+                                android:paddingRight="50px"
+                                android:paddingBottom="5px"
+                                android:layout_marginLeft="3px"
                                 android:prompt="@string/teamPrompt"
+                                android:background="@drawable/spinner_custom"
                         />
                 </TableRow>
                 <TableRow>
                         <TextView
                                 android:text=""
                         />
-                        <Button android:text="@string/about" android:id="@+id/aboutButton"></Button>
+                        <Button 
+                        android:layout_marginLeft="3px" 
+                        android:text="@string/about" 
+                        android:id="@+id/aboutButton" 
+                        android:background="@drawable/btn_custom">
+                        </Button>
                 </TableRow>
         </TableLayout>
 </LinearLayout>
