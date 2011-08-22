@@ -34,7 +34,7 @@ public class PlayerActivity extends Activity
                         try
                         {
                                 double predSal = 0.0, sal = 0.0, posit = 0.0;
-                                double pitch = 1.0, catcher = 1.0, firstb= 3.0, secondb= 1.74, thirdb = 2.7,
+                                double pitch = 3.047, catcher = 1.0, firstb= 3.0, secondb= 1.74, thirdb = 2.7,
                                 		shortstop = 1.16, leftf = 3.14 , centerf = 1.78, rightf = 3.15;
                                 InputStream is = assetManager.open("firstsaltest.txt");
                                 int curr = 0;
