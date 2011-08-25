@@ -28,6 +28,7 @@
                                 </intent-filter>
                                 </activity>
         <activity android:name="PitcherActivity"></activity>
+        <activity android:name="ValueActivity"></activity>
 
     </application>
 

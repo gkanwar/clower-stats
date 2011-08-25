@@ -53,7 +53,8 @@
 <string name="position">Position</string>
 <string name="team">Team</string>
 <string name="posit">Positions</string>
-<string name="about">About</string>
+<string name="about">Clower Stats</string>
+<string name="playerValue">Player Value</string>
 
 
 </resources>

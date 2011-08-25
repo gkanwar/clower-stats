@@ -62,7 +62,19 @@ public class MainActivity extends Activity
         	}
         });
         
-    }
+ Button buttonthree= (Button) findViewById(R.id.playerValueButton);
+ 	buttonthree.setOnClickListener(new View.OnClickListener()
+ 	{
+ 		@Override
+ 		public void onClick(View v)
+ 		{
+ 			Intent intent = new Intent(MainActivity.this,ValueActivity.class);
+ 			startActivity(intent);
+ 		}
+ 	});
+ 		}
+ 	
+    
     
         
        
