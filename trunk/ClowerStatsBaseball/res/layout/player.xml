@@ -43,6 +43,24 @@
 					android:paddingRight="5px"
 					android:paddingBottom="2px"
 					android:textSize="20sp"
+					android:text="@string/sal" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
+					android:text="@string/pred_sal" />
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="5px"
+					android:paddingTop="2px"
+					android:paddingRight="5px"
+					android:paddingBottom="2px"
+					android:textSize="20sp"
 					android:text="@string/g" />
 				<TextView
 					android:layout_width="wrap_content"
@@ -179,24 +197,7 @@
 					android:paddingBottom="2px"
 					android:textSize="20sp"
 					android:text="@string/ops" />
-				<TextView
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:paddingLeft="5px"
-					android:paddingTop="2px"
-					android:paddingRight="5px"
-					android:paddingBottom="2px"
-					android:textSize="20sp"
-					android:text="@string/sal" />
-				<TextView
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:paddingLeft="5px"
-					android:paddingTop="2px"
-					android:paddingRight="5px"
-					android:paddingBottom="2px"
-					android:textSize="20sp"
-					android:text="@string/pred_sal" />
+				
 			</TableRow>
 		</TableLayout>
 	</HorizontalScrollView>

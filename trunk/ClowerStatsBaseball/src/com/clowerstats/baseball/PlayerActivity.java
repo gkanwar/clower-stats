@@ -69,7 +69,7 @@ public class PlayerActivity extends Activity
                                 		
                                 		
                                 	}
-                                	else if(i == 19) //Player value column
+                                	else if(i == 3) //Player value column
                                         {
                                                 predSal = scanner.nextDouble();
                                                 tv = new TextView(this);
@@ -79,7 +79,7 @@ public class PlayerActivity extends Activity
                                                 tv.setPadding(5, 2, 5, 2);
                                                 tr.addView(tv);
                                         }
-                                        else if(i == 18) //Salary column
+                                        else if(i == 2) //Salary column
                                         {
                                                 sal = scanner.nextDouble();
                                                 tv = new TextView(this);

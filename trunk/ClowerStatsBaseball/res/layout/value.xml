@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <ScrollView android:layout_width="wrap_content"
+                android:layout_height="fill_parent">
+   
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/playerTableLayout"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:background="#ffffff">
+<TableRow
+android:background="#000000"
+>
+<ImageView
+android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:src="@drawable/main_logo"
+            
+            />
+</TableRow>
+<TableRow
+android:background="#000000"
+>
+<TextView 
+android:typeface="serif"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:textSize="20sp"
+android:textStyle="bold"
+android:gravity="center_horizontal"
+android:text="How is the Clower Stats Player Value Calculated?"
+android:shadowColor="#563283"  
+android:shadowRadius="1.5"  
+android:shadowDx="2"  
+android:shadowDy="2" 
+/>
+</TableRow>
+<TableRow
+android:background="#000000">
+
+<TextView
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+/>
+</TableRow>
+
+
+			<TableRow
+				android:background="#000000"
+				>
+			<TextView 
+			android:typeface="serif"
+			android:text="The Clower Stats Baseball Salaries App uses the best weighted combination
+of important performance variables to determine whether your favorite players are under or overvalued 
+in the baseball marketplace."
+android:id="@+id/TextView"
+android:layout_height="wrap_content"
+android:layout_width="wrap_content"
+android:textSize="20sp"
+/>
+   </TableRow>
+   <TableRow
+   android:background="#000000"
+   >
+   <TextView 
+   android:text="\nWe assign a “Player Value” to each individual based on performance variables from his career (not including the current 2011 season). Different performance variables might be more or less correlated with salary for different positions (i.e. Catchers may have different important variables factoring into their value than First Basemen)."
+   android:typeface="serif"
+   android:id="@+id/TextView"
+   android:layout_height="wrap_content"
+   android:layout_width="wrap_content"
+   android:textSize="20sp"
+   />
+   </TableRow>
+   <TableRow
+   android:background="#000000">
+   <TextView
+   
+   android:text="\nIn addition, some particular performance variables which are not listed may still be important. However, it is likely the case that the variable is highly correlated with the variables already in the equation, and will not add any additional predictive power."
+   android:typeface="serif"
+   android:id="@+id/TextView"
+   android:layout_height="wrap_content"
+   android:layout_width="wrap_content"
+   android:textSize="20sp"/>
+  
+  	
+			</TableRow>
+	<TableRow
+	android:background="#000000">
+	<TextView
+	
+	android:text="\nThe Clower Stats Player Value is calculated through a multiple regression analysis 
+		and is not intended to express an opinion on any player."
+		android:typeface="serif"
+		android:id="@+id/TextView"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:textSize="20sp"/>
+		</TableRow>
+		</TableLayout>
+
+   
+   
+  </ScrollView>
+</LinearLayout>
